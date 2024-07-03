@@ -26,7 +26,7 @@ fetch("https://restcountries.com/v3.1/all")
 function serchCuntrie(){
     let searchValue=document.getElementById("txtSearchValue").value;
 
-    let offitalName = document.getElementById("offitalName");
+    let officialName = document.getElementById("officialName");
    let name = document.getElementById("name")
    let img =  document.getElementById("img")
 
@@ -37,7 +37,7 @@ function serchCuntrie(){
     .then(data =>{
 
         data.forEach(obj=>{
-            offitalName.innerText = obj.name.official;
+            officialName.innerText = obj.name.official;
             name.innerText = obj.name.common;
      
             img.innerHTML=`<img src="${obj.flags.png}" alt="">`
